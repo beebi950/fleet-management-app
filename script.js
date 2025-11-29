@@ -135,6 +135,38 @@ function render(){
             save();
             render();
         };
-        
+
+        //delete
+
+        const del =document.createElement("button");
+        del.className="smallbtn";
+        del.innerText="Delete";
+        del.onclick=() => {
+            if(confirm("Deletethis vechile")){
+                fleets=fleets.filter((x) => x.id !== f.id);
+                save();
+                render();
+            }
+        };
+
+        actions.append(up,av,del);
+        card.append(actions);
+        grid.append(card);
+
     });
 }
+
+render();
+
+//clear filter
+
+clearFilter.addEventListener("click",() =>{
+    filtercat.value="all";
+    filterAvail.value="all";
+    render();
+});
+
+//re-render 
+
+filtercat.onchange=render;
+filterAvail.value=render;
