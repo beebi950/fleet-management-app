@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management App </title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="navbar">
+        <div class="title">Fleet Admin</div>
+
+        <div class="filter">
+
+            <label >Catrgory :</label>
+
+            <select  id="filterCategory">
+                <option value="all">All</option>
+                <option value="Auto"></option>
+                <option value="car"></option>
+                <option value="Bike"></option>
+                <option value="Truck"></option>
+                <option value="bus"></option>
+            </select>
+
+            <label>Avalibility</label>
+
+            <select id="filterAvailability">
+                <option value="all">All</option>
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+            </select>
+
+            <button id="filterBtn">Filter</button>
+
+        </div>
+    </header>
+
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h3>Reg No></h3>
+
+            <label>Category</label>
+            <select  id="category">
+                <option value="Auto"></option>
+                <option value="car"></option>
+                <option value="Bike"></option>
+                <option value="Truck"></option>
+                <option value="bus"></option>
+            </select>
+
+            <label >Avalibality</label>
+            <select  id="isAvalible">
+                <option >Available</option>
+                <option >Unavailable</option>
+            </select>
+
+            <button id="addFleet" class="btn">Add Fleet</button>
+        </aside>
+
+        <!-- Main -->
+         <main class="main">
+            <div id="fleetGrid" class="grid">
+            </div>
+         </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
